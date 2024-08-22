@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +14,7 @@ namespace CrudDefensa
 {
     public partial class clientes : Form
     {
-        string cadenaConexion = "Host=proyecto-aws.c2htk24uoh9j.us-east-1.rds.amazonaws.com;Port=5432;Username=postgres;Password=bases123456789;Database=postgres";
+        string cadenaConexion = "Host=proyecto-aws.c2htk24uoh9j.us-east-1.rds.amazonaws.com;Port=5432;Username=postgres;Password=bases123456789;Database=Proyecto";
         public clientes()
         {
             InitializeComponent();
@@ -79,7 +80,7 @@ namespace CrudDefensa
             }
             string nuevoGenero = txtGenero.Text;
             string nuevoTelefono = txtTelefono.Text;
-            string nuevoCorreo = txtCorreo.Text;
+            
             using (var connection = new NpgsqlConnection(cadenaConexion))
             {
                 try
@@ -100,7 +101,7 @@ namespace CrudDefensa
                         cmd.Parameters.AddWithValue("p_edad", nuevaEdad);
                         cmd.Parameters.AddWithValue("p_genero", nuevoGenero);
                         cmd.Parameters.AddWithValue("p_telefono", nuevoTelefono);
-                        cmd.Parameters.AddWithValue("p_correo", nuevoCorreo);
+                       
 
                         // Ejecutar el procedimiento almacenado
                         cmd.ExecuteNonQuery();
@@ -131,7 +132,12 @@ namespace CrudDefensa
             string nuevoSNombre = txtSegundoNombre.Text;
             string nuevoPApellido = txtPrimerApellido.Text;
             string nuevoSApellido =txtSegundoApellidos.Text;
-            string nuevoDNI = txtDNI.Text;
+            int nuevoDNI;
+            if (!int.TryParse(txtDNI.Text, out nuevoDNI))
+            {
+                MessageBox.Show("Por favor, ingresa un número entero válido para la dni.");
+                return;
+            }
             int nuevaEdad;
             if (!int.TryParse(txtEdad.Text, out nuevaEdad))
             {
@@ -140,7 +146,7 @@ namespace CrudDefensa
             }
             string nuevoGenero = txtGenero.Text;
             string nuevoTelefono = txtTelefono.Text;
-            string nuevoCorreo = txtCorreo.Text;
+           
 
 
 
@@ -150,13 +156,13 @@ namespace CrudDefensa
             using (var connection = new NpgsqlConnection(cadenaConexion))
             {
                 connection.Open();
-
-                using (var cmd = new NpgsqlCommand("actualizar_cliente", connection))
+                
+                using (var cmd = new NpgsqlCommand("modificar_cliente", connection))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     // Agregar los parámetros
-                    cmd.Parameters.AddWithValue(" p_dni", id);
+                    cmd.Parameters.AddWithValue("p_dni", id);
                     cmd.Parameters.AddWithValue("p_pnombre", nuevoPNombre);
                     cmd.Parameters.AddWithValue("p_snombre", nuevoSNombre);
                     cmd.Parameters.AddWithValue("p_papellido", nuevoPApellido);
@@ -164,7 +170,7 @@ namespace CrudDefensa
                     cmd.Parameters.AddWithValue("p_edad", nuevaEdad);
                     cmd.Parameters.AddWithValue("p_genero", nuevoGenero);
                     cmd.Parameters.AddWithValue("p_telefono", nuevoTelefono);
-                    cmd.Parameters.AddWithValue("p_correo", nuevoCorreo);
+                   
                 
 
                     // Ejecutar la actualización
@@ -210,7 +216,7 @@ namespace CrudDefensa
                 txtEdad.Text = row.Cells["edad"].Value.ToString();
                 txtGenero.Text = row.Cells["genero"].Value.ToString();
                 txtTelefono.Text = row.Cells["telefono"].Value.ToString();
-                txtCorreo.Text = row.Cells["Correo"].Value.ToString();
+               
 
 
             }
@@ -240,7 +246,7 @@ namespace CrudDefensa
                                 cmd.CommandType = CommandType.StoredProcedure;
 
                                 // Agregar el parámetro necesario para la eliminación
-                                cmd.Parameters.AddWithValue("dni", dni);
+                                cmd.Parameters.AddWithValue("p_dni", dni);
 
                                 // Ejecutar el procedimiento almacenado
                                 cmd.ExecuteNonQuery();

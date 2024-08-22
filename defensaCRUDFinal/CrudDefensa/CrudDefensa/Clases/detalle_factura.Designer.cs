@@ -30,7 +30,6 @@
         {
             this.bdDetalleFactura = new System.Windows.Forms.DataGridView();
             this.DatosClientes = new System.Windows.Forms.GroupBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.textEdad = new System.Windows.Forms.TextBox();
@@ -58,7 +57,6 @@
             // 
             // DatosClientes
             // 
-            this.DatosClientes.Controls.Add(this.btnEliminar);
             this.DatosClientes.Controls.Add(this.btnModificar);
             this.DatosClientes.Controls.Add(this.btnGuardar);
             this.DatosClientes.Controls.Add(this.textEdad);
@@ -81,16 +79,6 @@
             this.DatosClientes.TabStop = false;
             this.DatosClientes.Text = "datos detslleFactura";
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(138, 213);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(66, 23);
-            this.btnEliminar.TabIndex = 13;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(287, 213);
@@ -100,6 +88,7 @@
             this.btnModificar.TabIndex = 12;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnGuardar
             // 
@@ -231,7 +220,6 @@
 
         private System.Windows.Forms.DataGridView bdDetalleFactura;
         private System.Windows.Forms.GroupBox DatosClientes;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox textEdad;

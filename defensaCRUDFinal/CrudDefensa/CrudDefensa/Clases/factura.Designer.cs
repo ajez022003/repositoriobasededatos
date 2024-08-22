@@ -32,7 +32,6 @@
             this.DatosClientes = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.textEdad = new System.Windows.Forms.TextBox();
@@ -62,7 +61,6 @@
             // 
             this.DatosClientes.Controls.Add(this.textBox3);
             this.DatosClientes.Controls.Add(this.label9);
-            this.DatosClientes.Controls.Add(this.btnEliminar);
             this.DatosClientes.Controls.Add(this.btnModificar);
             this.DatosClientes.Controls.Add(this.btnGuardar);
             this.DatosClientes.Controls.Add(this.textEdad);
@@ -102,16 +100,6 @@
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 14;
             this.label9.Text = "Id Cliente";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(309, 99);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(66, 23);
-            this.btnEliminar.TabIndex = 13;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnModificar
             // 
@@ -256,7 +244,6 @@
         private System.Windows.Forms.GroupBox DatosClientes;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox textEdad;

@@ -18,11 +18,12 @@ namespace CrudDefensa.Clases
             InitializeComponent();
             CargarDatosProducto();
         }
+        string cadenaConexion = "Host=proyecto-aws.c2htk24uoh9j.us-east-1.rds.amazonaws.com;Port=5432;Username=postgres;Password=bases123456789;Database=Proyecto";
 
         private void CargarDatosProducto()
         {
             // Cadena de conexión
-            string cadenaConexion = "Host=proyecto-aws.c2htk24uoh9j.us-east-1.rds.amazonaws.com;Port=5432;Username=postgres;Password=bases123456789;Database=postgres";
+            
 
             using (NpgsqlConnection conexion = new NpgsqlConnection(cadenaConexion))
             {
@@ -66,6 +67,71 @@ namespace CrudDefensa.Clases
         private void DatosClientes_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            // Verificar si hay una fila seleccionada en el DataGridView
+            if (bdProducto.CurrentRow != null)
+            {
+                // Obtener el valor del DNI de la fila seleccionada
+                int dni = Convert.ToInt32(bdProducto.CurrentRow.Cells["dni"].Value);
+
+                // Confirmar la eliminación con el usuario
+                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este producto?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    using (var connection = new NpgsqlConnection(cadenaConexion))
+                    {
+                        try
+                        {
+                            connection.Open();
+
+                            // Configurar el comando para el procedimiento almacenado
+                            using (var cmd = new NpgsqlCommand("eliminar_producto", connection))
+                            {
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                // Agregar el parámetro necesario para la eliminación
+                                cmd.Parameters.AddWithValue("dni", dni);
+
+                                // Ejecutar el procedimiento almacenado
+                                cmd.ExecuteNonQuery();
+
+                                MessageBox.Show("Producto eliminado exitosamente.");
+                            }
+                        }
+                        catch (NpgsqlException ex)
+                        {
+                            MessageBox.Show("Error al eliminar el producto: " + ex.Message);
+                        }
+                    }
+
+                    // Recargar el DataGridView para reflejar los cambios
+                    bdProductoLoad();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona un producto para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void bdProductoLoad()
+        {
+            using (var connection = new NpgsqlConnection(cadenaConexion))
+            {
+                connection.Open();
+
+                using (var cmd = new NpgsqlCommand("SELECT * FROM producto", connection))
+                {
+                    NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Asigna el DataTable al DataGridView
+                    bdProducto.DataSource = dataTable;
+                }
+            }
         }
     }
 }

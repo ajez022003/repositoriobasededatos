@@ -14,7 +14,7 @@ namespace CrudDefensa.Clases
         NpgsqlConnection  conex = new NpgsqlConnection();
 
         static String servidor = "proyecto-aws.c2htk24uoh9j.us-east-1.rds.amazonaws.com";
-        static String bd = "postgres";
+        static String bd = "Proyecto";
         static String Usuario = "postgres";
         static String Contrasena = "bases123456789";
         static String Puerto = "5432";

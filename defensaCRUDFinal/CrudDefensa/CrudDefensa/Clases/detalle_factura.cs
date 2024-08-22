@@ -56,5 +56,10 @@ namespace CrudDefensa.Clases
         {
 
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

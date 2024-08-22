@@ -33,11 +33,11 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.textDNI = new System.Windows.Forms.TextBox();
             this.textID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textDNI = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bdproducto_vendedor)).BeginInit();
             this.DatosClientes.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,7 @@
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -100,6 +101,14 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // textDNI
+            // 
+            this.textDNI.Location = new System.Drawing.Point(111, 43);
+            this.textDNI.Margin = new System.Windows.Forms.Padding(2);
+            this.textDNI.Name = "textDNI";
+            this.textDNI.Size = new System.Drawing.Size(93, 20);
+            this.textDNI.TabIndex = 7;
             // 
             // textID
             // 
@@ -137,14 +146,6 @@
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id Producto";
-            // 
-            // textDNI
-            // 
-            this.textDNI.Location = new System.Drawing.Point(111, 43);
-            this.textDNI.Margin = new System.Windows.Forms.Padding(2);
-            this.textDNI.Name = "textDNI";
-            this.textDNI.Size = new System.Drawing.Size(93, 20);
-            this.textDNI.TabIndex = 7;
             // 
             // producto_vendedor
             // 

@@ -21,7 +21,7 @@ namespace CrudDefensa.Clases
         private void CargarDatosfactura()
         {
             // Cadena de conexión
-            string cadenaConexion = "Host=proyecto-aws.c2htk24uoh9j.us-east-1.rds.amazonaws.com;Port=5432;Username=postgres;Password=bases123456789;Database=postgres";
+            string cadenaConexion = "Host=proyecto-aws.c2htk24uoh9j.us-east-1.rds.amazonaws.com;Port=5432;Username=postgres;Password=bases123456789;Database=Proyecto";
 
             using (NpgsqlConnection conexion = new NpgsqlConnection(cadenaConexion))
             {

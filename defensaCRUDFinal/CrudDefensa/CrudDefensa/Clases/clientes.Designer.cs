@@ -30,8 +30,6 @@ namespace CrudDefensa
         private void InitializeComponent()
         {
             this.DatosClientes = new System.Windows.Forms.GroupBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.txtEdad = new System.Windows.Forms.TextBox();
@@ -60,8 +58,6 @@ namespace CrudDefensa
             // 
             // DatosClientes
             // 
-            this.DatosClientes.Controls.Add(this.txtCorreo);
-            this.DatosClientes.Controls.Add(this.label10);
             this.DatosClientes.Controls.Add(this.txtTelefono);
             this.DatosClientes.Controls.Add(this.txtGenero);
             this.DatosClientes.Controls.Add(this.txtEdad);
@@ -90,24 +86,6 @@ namespace CrudDefensa
             this.DatosClientes.TabIndex = 4;
             this.DatosClientes.TabStop = false;
             this.DatosClientes.Text = "Datos Clientes";
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(111, 264);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(93, 20);
-            this.txtCorreo.TabIndex = 21;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 271);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Correo:";
             // 
             // txtTelefono
             // 
@@ -335,8 +313,6 @@ namespace CrudDefensa
 
         #endregion
         private System.Windows.Forms.GroupBox DatosClientes;
-        private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.TextBox txtEdad;

@@ -30,8 +30,8 @@
         {
             this.bdEmpleados = new System.Windows.Forms.DataGridView();
             this.DatosClientes = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -56,8 +56,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bdEmpleados)).BeginInit();
             this.DatosClientes.SuspendLayout();
             this.SuspendLayout();
@@ -77,8 +75,6 @@
             // 
             this.DatosClientes.Controls.Add(this.textBox7);
             this.DatosClientes.Controls.Add(this.label13);
-            this.DatosClientes.Controls.Add(this.textBox5);
-            this.DatosClientes.Controls.Add(this.label11);
             this.DatosClientes.Controls.Add(this.textBox6);
             this.DatosClientes.Controls.Add(this.label12);
             this.DatosClientes.Controls.Add(this.textBox4);
@@ -113,25 +109,23 @@
             this.DatosClientes.Text = "Datos Empleados";
             this.DatosClientes.Enter += new System.EventHandler(this.DatosClientes_Enter);
             // 
-            // textBox5
+            // textBox7
             // 
-            this.textBox5.Location = new System.Drawing.Point(109, 320);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(93, 20);
-            this.textBox5.TabIndex = 25;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBox7.Location = new System.Drawing.Point(111, 322);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(93, 20);
+            this.textBox7.TabIndex = 27;
             // 
-            // label11
+            // label13
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 327);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Correo:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(4, 325);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 13);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Id Empleado";
             // 
             // textBox6
             // 
@@ -236,6 +230,7 @@
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -358,24 +353,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Primer Nombre";
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(113, 350);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(93, 20);
-            this.textBox7.TabIndex = 27;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 353);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 13);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Id Empleado";
-            // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,8 +396,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox7;
