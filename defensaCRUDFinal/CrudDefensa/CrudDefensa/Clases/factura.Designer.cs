@@ -29,24 +29,20 @@
         private void InitializeComponent()
         {
             this.bdfactura = new System.Windows.Forms.DataGridView();
-            this.DatosClientes = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.DatosFactura = new System.Windows.Forms.GroupBox();
+            this.textIdCliente = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.textEdad = new System.Windows.Forms.TextBox();
-            this.textApellidos = new System.Windows.Forms.TextBox();
-            this.textNombres = new System.Windows.Forms.TextBox();
-            this.textDNI = new System.Windows.Forms.TextBox();
-            this.textID = new System.Windows.Forms.TextBox();
+            this.textIdFactura = new System.Windows.Forms.TextBox();
+            this.textFecha = new System.Windows.Forms.TextBox();
+            this.textSubTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bdfactura)).BeginInit();
-            this.DatosClientes.SuspendLayout();
+            this.DatosFactura.SuspendLayout();
             this.SuspendLayout();
             // 
             // bdfactura
@@ -57,39 +53,35 @@
             this.bdfactura.Size = new System.Drawing.Size(325, 284);
             this.bdfactura.TabIndex = 7;
             // 
-            // DatosClientes
+            // DatosFactura
             // 
-            this.DatosClientes.Controls.Add(this.textBox3);
-            this.DatosClientes.Controls.Add(this.label9);
-            this.DatosClientes.Controls.Add(this.btnModificar);
-            this.DatosClientes.Controls.Add(this.btnGuardar);
-            this.DatosClientes.Controls.Add(this.textEdad);
-            this.DatosClientes.Controls.Add(this.textApellidos);
-            this.DatosClientes.Controls.Add(this.textNombres);
-            this.DatosClientes.Controls.Add(this.textDNI);
-            this.DatosClientes.Controls.Add(this.textID);
-            this.DatosClientes.Controls.Add(this.label6);
-            this.DatosClientes.Controls.Add(this.label5);
-            this.DatosClientes.Controls.Add(this.label4);
-            this.DatosClientes.Controls.Add(this.label3);
-            this.DatosClientes.Controls.Add(this.label2);
-            this.DatosClientes.Controls.Add(this.label1);
-            this.DatosClientes.Location = new System.Drawing.Point(49, 50);
-            this.DatosClientes.Margin = new System.Windows.Forms.Padding(2);
-            this.DatosClientes.Name = "DatosClientes";
-            this.DatosClientes.Padding = new System.Windows.Forms.Padding(2);
-            this.DatosClientes.Size = new System.Drawing.Size(433, 346);
-            this.DatosClientes.TabIndex = 6;
-            this.DatosClientes.TabStop = false;
-            this.DatosClientes.Text = "Datos Factura";
+            this.DatosFactura.Controls.Add(this.textIdCliente);
+            this.DatosFactura.Controls.Add(this.label9);
+            this.DatosFactura.Controls.Add(this.btnModificar);
+            this.DatosFactura.Controls.Add(this.btnGuardar);
+            this.DatosFactura.Controls.Add(this.textIdFactura);
+            this.DatosFactura.Controls.Add(this.textFecha);
+            this.DatosFactura.Controls.Add(this.textSubTotal);
+            this.DatosFactura.Controls.Add(this.label6);
+            this.DatosFactura.Controls.Add(this.label3);
+            this.DatosFactura.Controls.Add(this.label2);
+            this.DatosFactura.Controls.Add(this.label1);
+            this.DatosFactura.Location = new System.Drawing.Point(49, 50);
+            this.DatosFactura.Margin = new System.Windows.Forms.Padding(2);
+            this.DatosFactura.Name = "DatosFactura";
+            this.DatosFactura.Padding = new System.Windows.Forms.Padding(2);
+            this.DatosFactura.Size = new System.Drawing.Size(433, 346);
+            this.DatosFactura.TabIndex = 6;
+            this.DatosFactura.TabStop = false;
+            this.DatosFactura.Text = "Datos Factura";
             // 
-            // textBox3
+            // textIdCliente
             // 
-            this.textBox3.Location = new System.Drawing.Point(113, 171);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(93, 20);
-            this.textBox3.TabIndex = 17;
+            this.textIdCliente.Location = new System.Drawing.Point(113, 171);
+            this.textIdCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.textIdCliente.Name = "textIdCliente";
+            this.textIdCliente.Size = new System.Drawing.Size(93, 20);
+            this.textIdCliente.TabIndex = 17;
             // 
             // label9
             // 
@@ -123,45 +115,29 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // textEdad
+            // textIdFactura
             // 
-            this.textEdad.Location = new System.Drawing.Point(111, 135);
-            this.textEdad.Margin = new System.Windows.Forms.Padding(2);
-            this.textEdad.Name = "textEdad";
-            this.textEdad.Size = new System.Drawing.Size(93, 20);
-            this.textEdad.TabIndex = 10;
+            this.textIdFactura.Location = new System.Drawing.Point(111, 18); 
+            this.textIdFactura.Margin = new System.Windows.Forms.Padding(2);
+            this.textIdFactura.Name = "textIdFactura";
+            this.textIdFactura.Size = new System.Drawing.Size(93, 20);
+            this.textIdFactura.TabIndex = 10;
             // 
-            // textApellidos
+            // textFecha
             // 
-            this.textApellidos.Location = new System.Drawing.Point(111, 106);
-            this.textApellidos.Margin = new System.Windows.Forms.Padding(2);
-            this.textApellidos.Name = "textApellidos";
-            this.textApellidos.Size = new System.Drawing.Size(93, 20);
-            this.textApellidos.TabIndex = 9;
+            this.textFecha.Location = new System.Drawing.Point(111, 50); 
+            this.textFecha.Margin = new System.Windows.Forms.Padding(2);
+            this.textFecha.Name = "textFecha";
+            this.textFecha.Size = new System.Drawing.Size(93, 20);
+            this.textFecha.TabIndex = 9;
             // 
-            // textNombres
+            // textSubTotal
             // 
-            this.textNombres.Location = new System.Drawing.Point(111, 74);
-            this.textNombres.Margin = new System.Windows.Forms.Padding(2);
-            this.textNombres.Name = "textNombres";
-            this.textNombres.Size = new System.Drawing.Size(93, 20);
-            this.textNombres.TabIndex = 8;
-            // 
-            // textDNI
-            // 
-            this.textDNI.Location = new System.Drawing.Point(111, 50);
-            this.textDNI.Margin = new System.Windows.Forms.Padding(2);
-            this.textDNI.Name = "textDNI";
-            this.textDNI.Size = new System.Drawing.Size(93, 20);
-            this.textDNI.TabIndex = 7;
-            // 
-            // textID
-            // 
-            this.textID.Location = new System.Drawing.Point(111, 18);
-            this.textID.Margin = new System.Windows.Forms.Padding(2);
-            this.textID.Name = "textID";
-            this.textID.Size = new System.Drawing.Size(93, 20);
-            this.textID.TabIndex = 6;
+            this.textSubTotal.Location = new System.Drawing.Point(111, 74);
+            this.textSubTotal.Margin = new System.Windows.Forms.Padding(2);
+            this.textSubTotal.Name = "textSubTotal";
+            this.textSubTotal.Size = new System.Drawing.Size(93, 20);
+            this.textSubTotal.TabIndex = 8;
             // 
             // label6
             // 
@@ -174,23 +150,11 @@
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 138);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Total";
+            
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 109);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "ISV";
+            
             // 
             // label3
             // 
@@ -228,12 +192,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 450);
             this.Controls.Add(this.bdfactura);
-            this.Controls.Add(this.DatosClientes);
+            this.Controls.Add(this.DatosFactura);
             this.Name = "factura";
             this.Text = "factura";
             ((System.ComponentModel.ISupportInitialize)(this.bdfactura)).EndInit();
-            this.DatosClientes.ResumeLayout(false);
-            this.DatosClientes.PerformLayout();
+            this.DatosFactura.ResumeLayout(false);
+            this.DatosFactura.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -241,19 +205,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView bdfactura;
-        private System.Windows.Forms.GroupBox DatosClientes;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.GroupBox DatosFactura;
+        private System.Windows.Forms.TextBox textIdCliente;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox textEdad;
-        private System.Windows.Forms.TextBox textApellidos;
-        private System.Windows.Forms.TextBox textNombres;
-        private System.Windows.Forms.TextBox textDNI;
-        private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.TextBox textIdFactura;
+        private System.Windows.Forms.TextBox textFecha;
+        private System.Windows.Forms.TextBox textSubTotal;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

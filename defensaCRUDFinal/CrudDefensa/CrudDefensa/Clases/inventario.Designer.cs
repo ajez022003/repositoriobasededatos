@@ -29,23 +29,19 @@
         private void InitializeComponent()
         {
             this.bdinventario = new System.Windows.Forms.DataGridView();
-            this.DatosClientes = new System.Windows.Forms.GroupBox();
+            this.DatosInventario = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.textEdad = new System.Windows.Forms.TextBox();
-            this.textApellidos = new System.Windows.Forms.TextBox();
-            this.textNombres = new System.Windows.Forms.TextBox();
-            this.textDNI = new System.Windows.Forms.TextBox();
-            this.textID = new System.Windows.Forms.TextBox();
+            this.textidinventario = new System.Windows.Forms.TextBox();
+            this.textStock = new System.Windows.Forms.TextBox();
+            this.textIdProducto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bdinventario)).BeginInit();
-            this.DatosClientes.SuspendLayout();
+            this.DatosInventario.SuspendLayout();
             this.SuspendLayout();
             // 
             // bdinventario
@@ -59,30 +55,26 @@
             this.bdinventario.Size = new System.Drawing.Size(368, 300);
             this.bdinventario.TabIndex = 3;
             // 
-            // DatosClientes
+            // DatosInventario
             // 
-            this.DatosClientes.Controls.Add(this.btnEliminar);
-            this.DatosClientes.Controls.Add(this.btnModificar);
-            this.DatosClientes.Controls.Add(this.btnGuardar);
-            this.DatosClientes.Controls.Add(this.textEdad);
-            this.DatosClientes.Controls.Add(this.textApellidos);
-            this.DatosClientes.Controls.Add(this.textNombres);
-            this.DatosClientes.Controls.Add(this.textDNI);
-            this.DatosClientes.Controls.Add(this.textID);
-            this.DatosClientes.Controls.Add(this.label6);
-            this.DatosClientes.Controls.Add(this.label5);
-            this.DatosClientes.Controls.Add(this.label4);
-            this.DatosClientes.Controls.Add(this.label3);
-            this.DatosClientes.Controls.Add(this.label2);
-            this.DatosClientes.Controls.Add(this.label1);
-            this.DatosClientes.Location = new System.Drawing.Point(42, 75);
-            this.DatosClientes.Margin = new System.Windows.Forms.Padding(2);
-            this.DatosClientes.Name = "DatosClientes";
-            this.DatosClientes.Padding = new System.Windows.Forms.Padding(2);
-            this.DatosClientes.Size = new System.Drawing.Size(314, 256);
-            this.DatosClientes.TabIndex = 2;
-            this.DatosClientes.TabStop = false;
-            this.DatosClientes.Text = "Datos Inventario";
+            this.DatosInventario.Controls.Add(this.btnEliminar);
+            this.DatosInventario.Controls.Add(this.btnModificar);
+            this.DatosInventario.Controls.Add(this.btnGuardar);
+            this.DatosInventario.Controls.Add(this.textidinventario);
+            this.DatosInventario.Controls.Add(this.textStock);
+            this.DatosInventario.Controls.Add(this.textIdProducto);
+            this.DatosInventario.Controls.Add(this.label6);
+            this.DatosInventario.Controls.Add(this.label5);
+            this.DatosInventario.Controls.Add(this.label4);
+            this.DatosInventario.Controls.Add(this.label3);
+            this.DatosInventario.Location = new System.Drawing.Point(42, 75);
+            this.DatosInventario.Margin = new System.Windows.Forms.Padding(2);
+            this.DatosInventario.Name = "DatosInventario";
+            this.DatosInventario.Padding = new System.Windows.Forms.Padding(2);
+            this.DatosInventario.Size = new System.Drawing.Size(314, 256);
+            this.DatosInventario.TabIndex = 2;
+            this.DatosInventario.TabStop = false;
+            this.DatosInventario.Text = "Datos Inventario";
             // 
             // btnEliminar
             // 
@@ -117,45 +109,29 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // textEdad
+            // textIdProducto
             // 
-            this.textEdad.Location = new System.Drawing.Point(200, 135);
-            this.textEdad.Margin = new System.Windows.Forms.Padding(2);
-            this.textEdad.Name = "textEdad";
-            this.textEdad.Size = new System.Drawing.Size(93, 20);
-            this.textEdad.TabIndex = 10;
+            this.textIdProducto.Location = new System.Drawing.Point(200, 135);
+            this.textIdProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.textIdProducto.Name = "textidinventario";
+            this.textIdProducto.Size = new System.Drawing.Size(93, 20);
+            this.textIdProducto.TabIndex = 10;
             // 
-            // textApellidos
+            // textStock
             // 
-            this.textApellidos.Location = new System.Drawing.Point(200, 106);
-            this.textApellidos.Margin = new System.Windows.Forms.Padding(2);
-            this.textApellidos.Name = "textApellidos";
-            this.textApellidos.Size = new System.Drawing.Size(93, 20);
-            this.textApellidos.TabIndex = 9;
+            this.textStock.Location = new System.Drawing.Point(200, 106);
+            this.textStock.Margin = new System.Windows.Forms.Padding(2);
+            this.textStock.Name = "textStock";
+            this.textStock.Size = new System.Drawing.Size(93, 20);
+            this.textStock.TabIndex = 9;
             // 
-            // textNombres
+            // textidinventario
             // 
-            this.textNombres.Location = new System.Drawing.Point(200, 74);
-            this.textNombres.Margin = new System.Windows.Forms.Padding(2);
-            this.textNombres.Name = "textNombres";
-            this.textNombres.Size = new System.Drawing.Size(93, 20);
-            this.textNombres.TabIndex = 8;
-            // 
-            // textDNI
-            // 
-            this.textDNI.Location = new System.Drawing.Point(200, 43);
-            this.textDNI.Margin = new System.Windows.Forms.Padding(2);
-            this.textDNI.Name = "textDNI";
-            this.textDNI.Size = new System.Drawing.Size(93, 20);
-            this.textDNI.TabIndex = 7;
-            // 
-            // textID
-            // 
-            this.textID.Location = new System.Drawing.Point(200, 15);
-            this.textID.Margin = new System.Windows.Forms.Padding(2);
-            this.textID.Name = "textID";
-            this.textID.Size = new System.Drawing.Size(93, 20);
-            this.textID.TabIndex = 6;
+            this.textidinventario.Location = new System.Drawing.Point(200, 74);
+            this.textidinventario.Margin = new System.Windows.Forms.Padding(2);
+            this.textidinventario.Name = "textIdProducto";
+            this.textidinventario.Size = new System.Drawing.Size(93, 20);
+            this.textidinventario.TabIndex = 8;
             // 
             // label6
             // 
@@ -174,7 +150,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Edad:";
+            this.label5.Text = "Id Producto:";
             // 
             // label4
             // 
@@ -184,7 +160,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "segundo apellido";
+            this.label4.Text = "Stock";
             // 
             // label3
             // 
@@ -194,28 +170,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Primer apellido";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 46);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Segundo Nombre";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Primer Nombre";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label3.Text = "Id Inventario";
             // 
             // inventario
             // 
@@ -223,33 +178,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bdinventario);
-            this.Controls.Add(this.DatosClientes);
+            this.Controls.Add(this.DatosInventario);
             this.Name = "inventario";
-            this.Text = "Form11";
+            this.Text = "Datos Inventario";
             ((System.ComponentModel.ISupportInitialize)(this.bdinventario)).EndInit();
-            this.DatosClientes.ResumeLayout(false);
-            this.DatosClientes.PerformLayout();
+            this.DatosInventario.ResumeLayout(false);
+            this.DatosInventario.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView bdinventario;
-        private System.Windows.Forms.GroupBox DatosClientes;
+        private System.Windows.Forms.GroupBox DatosInventario;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox textEdad;
-        private System.Windows.Forms.TextBox textApellidos;
-        private System.Windows.Forms.TextBox textNombres;
-        private System.Windows.Forms.TextBox textDNI;
-        private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.TextBox textIdProducto;
+        private System.Windows.Forms.TextBox textStock;
+        private System.Windows.Forms.TextBox textidinventario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-    }
+        }
 }

@@ -61,28 +61,84 @@ namespace CrudDefensa.Clases
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            int nuevoIdMarca;
+            if (!int.TryParse(textidmarca.Text, out nuevoIdMarca))
+            {
+                MessageBox.Show("Por favor, ingresa un número entero válido para id marca.");
+                return;
+            }
+            
+            string nuevoNombre = textnombre.Text;
 
+            using (var connection = new NpgsqlConnection(cadenaConexion))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Configurar el comando para el procedimiento almacenado
+                    using (var cmd = new NpgsqlCommand("agregar_marca", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Agregar los parámetros necesarios para la inserción
+                        cmd.Parameters.AddWithValue("id_marca", nuevoIdMarca);
+                        cmd.Parameters.AddWithValue("nombre", nuevoNombre);
+
+                        // Ejecutar el procedimiento almacenado
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Marca registrada exitosamente.");
+                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    MessageBox.Show("Error al guardar la marca: " + ex.Message);
+                }
+            }
+
+            // Recargar el DataGridView para reflejar los nuevos datos
+            bdMarcaLoad();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            
+            // Obtener el nuevo valor del TextBox
+            string nuevoNombre = textnombre.Text;
+
+            // Suponiendo que tienes una clave primaria en la tabla para identificar la fila a actualizar
+            int nuevaIdMarca = Convert.ToInt32(bdMarca.CurrentRow.Cells["id_marca"].Value);
 
             using (var connection = new NpgsqlConnection(cadenaConexion))
             {
-                connection.Open();
-
-                using (var cmd = new NpgsqlCommand("actualizar_marca", connection))
+                try
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    connection.Open();
 
-                    // Agregar parámetros si es necesario
-                    // cmd.Parameters.AddWithValue("param_name", param_value);
+                    using (var cmd = new NpgsqlCommand("modificar_marca", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                    // Ejecutar el procedimiento almacenado
-                    cmd.ExecuteNonQuery();
+                        // Agregar los parámetros
+                        cmd.Parameters.AddWithValue("id_marca_m", nuevaIdMarca);
+                        cmd.Parameters.AddWithValue("nombre_m", nuevoNombre);
+
+
+
+                        // Ejecutar la actualización
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Marca modificada exitosamente.");
+                    }
+                }
+                catch (NpgsqlException ex)
+                {
+                    MessageBox.Show("Error al modificar marca: " + ex.Message);
                 }
             }
+
+            // Actualizar el DataGridView para reflejar los cambios
+            bdMarcaLoad();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -90,11 +146,11 @@ namespace CrudDefensa.Clases
             // Verificar si hay una fila seleccionada en el DataGridView
             if (bdMarca.CurrentRow != null)
             {
-                // Obtener el valor del DNI de la fila seleccionada
-                int dni = Convert.ToInt32(bdMarca.CurrentRow.Cells["dni"].Value);
+                // Obtener el valor del idinventario de la fila seleccionada
+                int idmarca = Convert.ToInt32(bdMarca.CurrentRow.Cells["id_marca"].Value);
 
                 // Confirmar la eliminación con el usuario
-                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar esta marca?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este inventario?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
                     using (var connection = new NpgsqlConnection(cadenaConexion))
@@ -109,17 +165,17 @@ namespace CrudDefensa.Clases
                                 cmd.CommandType = CommandType.StoredProcedure;
 
                                 // Agregar el parámetro necesario para la eliminación
-                                cmd.Parameters.AddWithValue("dni", dni);
+                                cmd.Parameters.AddWithValue("id_marca_m", idmarca);
 
                                 // Ejecutar el procedimiento almacenado
                                 cmd.ExecuteNonQuery();
 
-                                MessageBox.Show("marca eliminado exitosamente.");
+                                MessageBox.Show("Marca eliminada exitosamente.");
                             }
                         }
                         catch (NpgsqlException ex)
                         {
-                            MessageBox.Show("Error al eliminar la marca: " + ex.Message);
+                            MessageBox.Show("Error al eliminar marca: " + ex.Message);
                         }
                     }
 

@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.bdMarca = new System.Windows.Forms.DataGridView();
-            this.DatosClientes = new System.Windows.Forms.GroupBox();
+            this.DatosMarca = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.textDNI = new System.Windows.Forms.TextBox();
-            this.textID = new System.Windows.Forms.TextBox();
+            this.textnombre = new System.Windows.Forms.TextBox();
+            this.textidmarca = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bdMarca)).BeginInit();
-            this.DatosClientes.SuspendLayout();
+            this.DatosMarca.SuspendLayout();
             this.SuspendLayout();
             // 
             // bdMarca
@@ -53,24 +53,24 @@
             this.bdMarca.Size = new System.Drawing.Size(368, 300);
             this.bdMarca.TabIndex = 3;
             // 
-            // DatosClientes
+            // DatosMarca
             // 
-            this.DatosClientes.Controls.Add(this.btnEliminar);
-            this.DatosClientes.Controls.Add(this.btnModificar);
-            this.DatosClientes.Controls.Add(this.btnGuardar);
-            this.DatosClientes.Controls.Add(this.textDNI);
-            this.DatosClientes.Controls.Add(this.textID);
-            this.DatosClientes.Controls.Add(this.label6);
-            this.DatosClientes.Controls.Add(this.label2);
-            this.DatosClientes.Controls.Add(this.label1);
-            this.DatosClientes.Location = new System.Drawing.Point(42, 75);
-            this.DatosClientes.Margin = new System.Windows.Forms.Padding(2);
-            this.DatosClientes.Name = "DatosClientes";
-            this.DatosClientes.Padding = new System.Windows.Forms.Padding(2);
-            this.DatosClientes.Size = new System.Drawing.Size(314, 256);
-            this.DatosClientes.TabIndex = 2;
-            this.DatosClientes.TabStop = false;
-            this.DatosClientes.Text = "Datos marca";
+            this.DatosMarca.Controls.Add(this.btnEliminar);
+            this.DatosMarca.Controls.Add(this.btnModificar);
+            this.DatosMarca.Controls.Add(this.btnGuardar);
+            this.DatosMarca.Controls.Add(this.textnombre);
+            this.DatosMarca.Controls.Add(this.textidmarca);
+            this.DatosMarca.Controls.Add(this.label6);
+            this.DatosMarca.Controls.Add(this.label2);
+            this.DatosMarca.Controls.Add(this.label1);
+            this.DatosMarca.Location = new System.Drawing.Point(42, 75);
+            this.DatosMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.DatosMarca.Name = "DatosMarca";
+            this.DatosMarca.Padding = new System.Windows.Forms.Padding(2);
+            this.DatosMarca.Size = new System.Drawing.Size(314, 256);
+            this.DatosMarca.TabIndex = 2;
+            this.DatosMarca.TabStop = false;
+            this.DatosMarca.Text = "Datos marca";
             // 
             // btnEliminar
             // 
@@ -105,21 +105,21 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // textDNI
+            // textnombre
             // 
-            this.textDNI.Location = new System.Drawing.Point(200, 43);
-            this.textDNI.Margin = new System.Windows.Forms.Padding(2);
-            this.textDNI.Name = "textDNI";
-            this.textDNI.Size = new System.Drawing.Size(93, 20);
-            this.textDNI.TabIndex = 7;
+            this.textnombre.Location = new System.Drawing.Point(200, 43);
+            this.textnombre.Margin = new System.Windows.Forms.Padding(2);
+            this.textnombre.Name = "textnombre";
+            this.textnombre.Size = new System.Drawing.Size(93, 20);
+            this.textnombre.TabIndex = 7;
             // 
-            // textID
+            // textidmarca
             // 
-            this.textID.Location = new System.Drawing.Point(200, 15);
-            this.textID.Margin = new System.Windows.Forms.Padding(2);
-            this.textID.Name = "textID";
-            this.textID.Size = new System.Drawing.Size(93, 20);
-            this.textID.TabIndex = 6;
+            this.textidmarca.Location = new System.Drawing.Point(200, 15);
+            this.textidmarca.Margin = new System.Windows.Forms.Padding(2);
+            this.textidmarca.Name = "textidmarca";
+            this.textidmarca.Size = new System.Drawing.Size(93, 20);
+            this.textidmarca.TabIndex = 6;
             // 
             // label6
             // 
@@ -138,7 +138,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Segundo Nombre";
+            this.label2.Text = "Nombre";
             // 
             // label1
             // 
@@ -148,7 +148,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Primer Nombre";
+            this.label1.Text = "ID Marca";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Marca
@@ -157,12 +157,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bdMarca);
-            this.Controls.Add(this.DatosClientes);
+            this.Controls.Add(this.DatosMarca);
             this.Name = "Marca";
             this.Text = "Form8";
             ((System.ComponentModel.ISupportInitialize)(this.bdMarca)).EndInit();
-            this.DatosClientes.ResumeLayout(false);
-            this.DatosClientes.PerformLayout();
+            this.DatosMarca.ResumeLayout(false);
+            this.DatosMarca.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -170,12 +170,12 @@
         #endregion
 
         private System.Windows.Forms.DataGridView bdMarca;
-        private System.Windows.Forms.GroupBox DatosClientes;
+        private System.Windows.Forms.GroupBox DatosMarca;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox textDNI;
-        private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.TextBox textnombre;
+        private System.Windows.Forms.TextBox textidmarca;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
